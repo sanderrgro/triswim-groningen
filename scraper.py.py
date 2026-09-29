@@ -15,6 +15,11 @@ POOLS = {
 ALLOW_KEYWORDS = ["banenzwemmen", "banen zwemmen", "borstcrawl", "sportief zwemmen", "vroege vogel"]
 EXCLUDE_KEYWORDS = ["baby", "peuter", "aquajogging", "aquafit", "therapie", "leszwemmen", "discowemmen"]
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept-Language": "nl-NL,nl;q=0.9,en-US;q=0.8,en;q=0.7"
+}
+
 def is_triathlon_suitable(title):
     t = title.lower()
     if any(ex in t for ex in EXCLUDE_KEYWORDS):
@@ -28,13 +33,13 @@ def fetch_sport050_sessions():
         "parrel": "https://www.sport050.nl/zwembaden/de-parrel/openingstijden/",
         "helperbad": "https://www.sport050.nl/zwembaden/helperbad/openingstijden/"
     }
-    headers = {"User-Agent": "Mozilla/5.0"}
+    
     for pool_id, url in urls.items():
         try:
-            res = requests.get(url, headers=headers, timeout=10)
+            res = requests.get(url, headers=HEADERS, timeout=15)
             if res.status_code == 200:
                 soup = BeautifulSoup(res.text, 'html.parser')
-                rows = soup.find_all(['tr', 'div'], class_=re.compile(r'(rooster|openingstijd|activity)'))
+                rows = soup.find_all(['tr', 'div', 'p', 'li'])
                 for row in rows:
                     text = row.get_text(separator=' ').strip()
                     if is_triathlon_suitable(text):
@@ -56,12 +61,11 @@ def fetch_sport050_sessions():
 def fetch_haren_sessions():
     sessions = []
     url = "https://www.scharlakenhof.nl/openingstijden/"
-    headers = {"User-Agent": "Mozilla/5.0"}
     try:
-        res = requests.get(url, headers=headers, timeout=10)
+        res = requests.get(url, headers=HEADERS, timeout=15)
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, 'html.parser')
-            for item in soup.find_all(['li', 'p', 'tr']):
+            for item in soup.find_all(['li', 'p', 'tr', 'div']):
                 text = item.get_text()
                 if is_triathlon_suitable(text):
                     times = re.findall(r'(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})', text)
@@ -82,8 +86,16 @@ def fetch_haren_sessions():
 def main():
     print("Scrapen gestart...")
     sessions = []
-    sessions.extend(fetch_sport050_sessions())
-    sessions.extend(fetch_haren_sessions())
+    
+    try:
+        sessions.extend(fetch_sport050_sessions())
+    except Exception as e:
+        print(f"Sport050 fout: {e}")
+        
+    try:
+        sessions.extend(fetch_haren_sessions())
+    except Exception as e:
+        print(f"Haren fout: {e}")
 
     output_data = {
         "updated_at": datetime.now().isoformat(),
@@ -94,7 +106,7 @@ def main():
     with open('schedule.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"Klaar! {len(sessions)} sessies opgeslagen.")
+    print(f"Klaar! {len(sessions)} sessies opgeslagen in schedule.json.")
 
 if __name__ == "__main__":
     main()
