@@ -1,98 +1,281 @@
 {
-  "updated_at": "2026-10-01T11:15:37.829464",
-  "pools": {
-    "kardinge": {
-      "name": "Sportcentrum Kardinge",
-      "city": "Groningen",
-      "type": "25m / 50m",
-      "lat": 53.2381,
-      "lng": 6.6025
-    },
-    "parrel": {
-      "name": "Zwembad De Parrel",
-      "city": "Groningen",
-      "type": "25m",
-      "lat": 53.2345,
-      "lng": 6.5512
-    },
-    "helperbad": {
-      "name": "Helperbad",
-      "city": "Groningen",
-      "type": "25m",
-      "lat": 53.1978,
-      "lng": 6.5791
-    },
-    "haren": {
-      "name": "Scharlakenhof",
-      "city": "Haren",
-      "type": "25m",
-      "lat": 53.1712,
-      "lng": 6.612
-    },
-    "drachten": {
-      "name": "De Welle",
-      "city": "Drachten",
-      "type": "50m Wedstrijdbad",
-      "lat": 53.109,
-      "lng": 6.094
-    }
-  },
-  "sessions": [
+  "zwembaden": [
     {
-      "pool_id": "kardinge",
-      "activity": "Banenzwemmen 50m",
-      "day_of_week": "Maandag",
-      "start_time": "07:00",
-      "end_time": "08:30",
-      "pool_type": "50m"
+      "locatie": "Drachten",
+      "reguliere_openingstijden": [
+        {
+          "dagen": "Maandag t/m vrijdag",
+          "tijd": "07.00 - 14.00 uur"
+        },
+        {
+          "dag": "Maandag",
+          "tijd": "19.00 - 21.15 uur"
+        },
+        {
+          "dagen": "Dinsdag t/m donderdag",
+          "tijd": "19.00 - 20.30 uur"
+        },
+        {
+          "dag": "Vrijdag",
+          "tijd": "18.00 - 18.45 uur"
+        },
+        {
+          "dag": "Zondag",
+          "tijd": "08.30 - 15.30 uur"
+        }
+      ]
     },
     {
-      "pool_id": "kardinge",
-      "activity": "Banenzwemmen",
-      "day_of_week": "Dinsdag",
-      "start_time": "07:00",
-      "end_time": "08:30",
-      "pool_type": "25m"
+      "locatie": "Haren",
+      "wekelijks_rooster": {
+        "maandag": [
+          { "activiteit": "Banenzwemmen", "tijd": "07:30 - 13:00", "bassin": "25 m bassin" },
+          { "activiteit": "Banenzwemmen", "tijd": "18:30 - 21:00", "bassin": "25 m bassin" }
+        ],
+        "dinsdag": [
+          { "activiteit": "Banenzwemmen", "tijd": "07:30 - 13:00", "bassin": "25 m bassin" }
+        ],
+        "woensdag": [
+          { "activiteit": "Banenzwemmen", "tijd": "07:30 - 13:00", "bassin": "25 m bassin" },
+          { "activiteit": "Banenzwemmen", "tijd": "18:30 - 21:00", "bassin": "25 m bassin" }
+        ],
+        "donderdag": [
+          { "activiteit": "Banenzwemmen", "tijd": "07:30 - 13:00", "bassin": "25 m bassin" }
+        ],
+        "vrijdag": [
+          { "activiteit": "Banenzwemmen", "tijd": "07:30 - 13:00", "bassin": "25 m bassin" }
+        ],
+        "zaterdag": [],
+        "zondag": [
+          { "activiteit": "Banenzwemmen", "tijd": "10:00 - 13:00", "bassin": "25 m bassin" }
+        ]
+      }
     },
     {
-      "pool_id": "helperbad",
-      "activity": "Mochten & Ochtendzwemmen",
-      "day_of_week": "Woensdag",
-      "start_time": "07:00",
-      "end_time": "08:30",
-      "pool_type": "25m"
+      "locatie": "Helperzwembad",
+      "periodes": [
+        {
+          "periode": "ma 5 oktober t/m zo 11 oktober",
+          "rooster": {
+            "maandag": [
+              { "tijd": "07:00 - 12:15", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "12:15 - 13:30", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "14:30 - 15:30", "activiteit": "Banen zwemmen senioren", "bassin": "Eelkema bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "20:15 - 21:15", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" }
+            ],
+            "dinsdag": [
+              { "tijd": "07:00 - 12:00", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "12:00 - 13:30", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "20:00 - 22:00", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" }
+            ],
+            "woensdag": [
+              { "tijd": "07:00 - 13:30", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "13:30 - 15:30", "activiteit": "Zwemmen kindermiddag", "bassin": "Eelkema bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "20:00 - 22:00", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" }
+            ],
+            "donderdag": [
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" },
+              { "tijd": "08:30 - 10:00", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "10:00 - 11:00", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" },
+              { "tijd": "11:00 - 12:00", "activiteit": "Banen zwemmen vrouwen", "bassin": "Ranomi bad" },
+              { "tijd": "12:00 - 14:30", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "14:30 - 15:30", "activiteit": "Banen zwemmen senioren", "bassin": "Eelkema bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" },
+              { "tijd": "20:30 - 22:00", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" }
+            ],
+            "vrijdag": [
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" },
+              { "tijd": "08:30 - 10:00", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "10:00 - 11:00", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" },
+              { "tijd": "11:00 - 13:30", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "20:00 - 21:00", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" }
+            ],
+            "zaterdag": [
+              { "tijd": "09:00 - 11:00", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" }
+            ],
+            "zondag": [
+              { "tijd": "08:00 - 10:00", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Gezinsochtend zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Zwemmen recreatief", "bassin": "Ranomi bad" }
+            ]
+          }
+        },
+        {
+          "periode": "ma 12 oktober t/m zo 18 oktober",
+          "rooster": {
+            "maandag": [
+              { "tijd": "07:00 - 12:00", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "12:00 - 13:30", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "13:30 - 17:15", "activiteit": "Zwemmen kindermiddag", "bassin": "Ranomi bad" },
+              { "tijd": "13:30 - 17:15", "activiteit": "Zwemmen recreatief", "bassin": "Ranomi bad" },
+              { "tijd": "17:00 - 18:15", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "19:30 - 21:00", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" }
+            ],
+            "dinsdag": [
+              { "tijd": "07:00 - 12:00", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "13:30 - 17:00", "activiteit": "Zwemmen kindermiddag", "bassin": "Eelkema bad" },
+              { "tijd": "17:00 - 18:15", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "20:00 - 22:00", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" }
+            ],
+            "woensdag": [
+              { "tijd": "07:00 - 12:00", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "13:30 - 17:15", "activiteit": "Zwemmen kindermiddag", "bassin": "Ranomi bad" },
+              { "tijd": "13:30 - 17:15", "activiteit": "Zwemmen recreatief", "bassin": "Ranomi bad" },
+              { "tijd": "17:00 - 18:15", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" },
+              { "tijd": "20:00 - 22:00", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" }
+            ],
+            "donderdag": [
+              { "tijd": "07:00 - 12:00", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" },
+              { "tijd": "12:00 - 13:30", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "13:30 - 17:15", "activiteit": "Zwemmen kindermiddag", "bassin": "Ranomi bad" },
+              { "tijd": "13:30 - 17:15", "activiteit": "Zwemmen recreatief", "bassin": "Ranomi bad" },
+              { "tijd": "17:00 - 18:15", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" },
+              { "tijd": "20:00 - 22:00", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" }
+            ],
+            "vrijdag": [
+              { "tijd": "07:00 - 12:00", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" },
+              { "tijd": "12:00 - 13:30", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "13:30 - 17:15", "activiteit": "Zwemmen kindermiddag", "bassin": "Ranomi bad" },
+              { "tijd": "13:30 - 17:15", "activiteit": "Zwemmen recreatief", "bassin": "Ranomi bad" },
+              { "tijd": "17:00 - 18:15", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" },
+              { "tijd": "20:00 - 22:00", "activiteit": "Banen zwemmen warm water", "bassin": "Eelkema bad" }
+            ],
+            "zaterdag": [
+              { "tijd": "08:30 - 11:30", "activiteit": "Banen zwemmen", "bassin": "Eelkema bad" }
+            ],
+            "zondag": [
+              { "tijd": "08:00 - 10:00", "activiteit": "Banen zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Gezinsochtend zwemmen", "bassin": "Ranomi bad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Zwemmen recreatief", "bassin": "Ranomi bad" }
+            ]
+          }
+        }
+      ]
     },
     {
-      "pool_id": "parrel",
-      "activity": "Banenzwemmen",
-      "day_of_week": "Donderdag",
-      "start_time": "07:00",
-      "end_time": "08:30",
-      "pool_type": "25m"
+      "locatie": "Sportcentrum Kardinge",
+      "periodes": [
+        {
+          "periode": "ma 5 oktober t/m zo 11 oktober",
+          "rooster": {
+            "maandag": [
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen", "bassin": "Instructiebad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "20:15 - 21:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" }
+            ],
+            "dinsdag": [
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen", "bassin": "Instructiebad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "20:15 - 21:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" }
+            ],
+            "woensdag": [
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen", "bassin": "Instructiebad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "14:00 - 15:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "20:15 - 21:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" }
+            ],
+            "donderdag": [
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen warm water", "bassin": "Instructiebad" },
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "20:15 - 21:15", "activiteit": "Banen zwemmen warm water", "bassin": "Instructiebad" },
+              { "tijd": "20:15 - 21:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" }
+            ],
+            "vrijdag": [
+              { "tijd": "07:00 - 08:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "11:45 - 13:45", "activiteit": "Banen zwemmen warm water", "bassin": "Instructiebad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "20:15 - 21:15", "activiteit": "Banen zwemmen warm water", "bassin": "Instructiebad" },
+              { "tijd": "20:15 - 21:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" }
+            ],
+            "zaterdag": [
+              { "tijd": "10:15 - 11:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "13:15 - 17:00", "activiteit": "Banen zwemmen (deel van het bad)", "bassin": "25 meter bad" }
+            ],
+            "zondag": [
+              { "tijd": "10:00 - 11:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "16:00 - 17:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" }
+            ]
+          }
+        }
+      ]
     },
     {
-      "pool_id": "kardinge",
-      "activity": "Banenzwemmen 50m",
-      "day_of_week": "Vrijdag",
-      "start_time": "07:00",
-      "end_time": "08:30",
-      "pool_type": "50m"
-    },
-    {
-      "pool_id": "haren",
-      "activity": "Banenzwemmen",
-      "day_of_week": "Zaterdag",
-      "start_time": "08:00",
-      "end_time": "10:00",
-      "pool_type": "25m"
-    },
-    {
-      "pool_id": "drachten",
-      "activity": "50m Borstcrawl Training",
-      "day_of_week": "Zondag",
-      "start_time": "09:00",
-      "end_time": "11:00",
-      "pool_type": "50m"
+      "locatie": "Zwembad De Parrel",
+      "periodes": [
+        {
+          "periode": "ma 5 oktober t/m zo 11 oktober",
+          "rooster": {
+            "maandag": [
+              { "tijd": "07:00 - 09:15", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "07:00 - 12:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "11:15 - 12:30", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "20:00 - 21:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "20:00 - 21:00", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" }
+            ],
+            "dinsdag": [
+              { "tijd": "07:00 - 09:45", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "07:00 - 09:45", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "11:15 - 13:15", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "11:15 - 15:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "17:15 - 18:15", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "20:00 - 21:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "20:00 - 21:00", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" }
+            ],
+            "woensdag": [
+              { "tijd": "07:00 - 09:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "07:00 - 09:30", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "10:00 - 13:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "10:00 - 13:30", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "20:00 - 21:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "20:00 - 21:00", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" }
+            ],
+            "donderdag": [
+              { "tijd": "07:00 - 08:45", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "07:00 - 13:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "10:45 - 13:15", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "17:30 - 18:30", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "17:30 - 18:30", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "20:00 - 21:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "20:00 - 21:00", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" }
+            ],
+            "vrijdag": [
+              { "tijd": "07:00 - 08:45", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "07:00 - 09:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "10:30 - 11:00", "activiteit": "Banen zwemmen senioren", "bassin": "25 meter bad" },
+              { "tijd": "11:00 - 14:45", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "11:30 - 14:45", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" }
+            ],
+            "zaterdag": [
+              { "tijd": "07:00 - 08:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "07:00 - 08:00", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "10:45 - 12:15", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "10:45 - 12:15", "activiteit": "Gezinsochtend zwemmen", "bassin": "Instructiebad" },
+              { "tijd": "10:45 - 12:15", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" }
+            ],
+            "zondag": [
+              { "tijd": "08:00 - 10:00", "activiteit": "Banen zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "08:00 - 12:00", "activiteit": "Gezinsochtend zwemmen", "bassin": "Instructiebad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Gezinsochtend zwemmen", "bassin": "25 meter bad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Zwemmen recreatief instructiebad", "bassin": "Instructiebad" },
+              { "tijd": "10:00 - 12:00", "activiteit": "Zwemmen recreatief", "bassin": "25 meter bad" }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
