@@ -53,7 +53,6 @@
     {"pool_id": "kardinge", "activity": "Banen zwemmen warm water", "day_of_week": "donderdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25 meter bad"},
     {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "10:00", "end_time": "12:00", "pool_type": "25 meter bad"},
     {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "17:15", "end_time": "18:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen warm water", "day_of_week": "donderdag", "start_time": "20:15", "end_time": "21:15", "pool_type": "Instructiebad"},
     {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "20:15", "end_time": "21:15", "pool_type": "25 meter bad"},
     {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25 meter bad"},
     {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "10:00", "end_time": "12:00", "pool_type": "25 meter bad"},
