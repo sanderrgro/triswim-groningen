@@ -37,5 +37,62 @@
       "lng": 6.094
     }
   },
-  "sessions": []
+  "sessions": [
+    {
+      "pool_id": "kardinge",
+      "activity": "Banenzwemmen 50m",
+      "day_of_week": "Maandag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "50m"
+    },
+    {
+      "pool_id": "kardinge",
+      "activity": "Banenzwemmen",
+      "day_of_week": "Dinsdag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "25m"
+    },
+    {
+      "pool_id": "helperbad",
+      "activity": "Mochten & Ochtendzwemmen",
+      "day_of_week": "Woensdag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "25m"
+    },
+    {
+      "pool_id": "parrel",
+      "activity": "Banenzwemmen",
+      "day_of_week": "Donderdag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "25m"
+    },
+    {
+      "pool_id": "kardinge",
+      "activity": "Banenzwemmen 50m",
+      "day_of_week": "Vrijdag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "50m"
+    },
+    {
+      "pool_id": "haren",
+      "activity": "Banenzwemmen",
+      "day_of_week": "Zaterdag",
+      "start_time": "08:00",
+      "end_time": "10:00",
+      "pool_type": "25m"
+    },
+    {
+      "pool_id": "drachten",
+      "activity": "50m Borstcrawl Training",
+      "day_of_week": "Zondag",
+      "start_time": "09:00",
+      "end_time": "11:00",
+      "pool_type": "50m"
+    }
+  ]
 }
