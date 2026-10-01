@@ -12,7 +12,17 @@ POOLS = {
     "drachten": {"name": "De Welle", "city": "Drachten", "type": "50m Wedstrijdbad", "lat": 53.1090, "lng": 6.0940}
 }
 
-# Ruimere trefwoorden om meer sessies op te vangen
+# Terugvalrooster voor het geval dat de live scraping geen resultaten oplevert
+DEFAULT_SCHEDULE = [
+    {"pool_id": "kardinge", "activity": "Banenzwemmen 50m", "day_of_week": "Maandag", "start_time": "07:00", "end_time": "08:30", "pool_type": "50m"},
+    {"pool_id": "kardinge", "activity": "Banenzwemmen", "day_of_week": "Dinsdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25m"},
+    {"pool_id": "helperbad", "activity": "Ochtendzwemmen", "day_of_week": "Woensdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25m"},
+    {"pool_id": "parrel", "activity": "Banenzwemmen", "day_of_week": "Donderdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25m"},
+    {"pool_id": "kardinge", "activity": "Banenzwemmen 50m", "day_of_week": "Vrijdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "50m"},
+    {"pool_id": "haren", "activity": "Banenzwemmen", "day_of_week": "Zaterdag", "start_time": "08:00", "end_time": "10:00", "pool_type": "25m"},
+    {"pool_id": "drachten", "activity": "50m Borstcrawl Training", "day_of_week": "Zondag", "start_time": "09:00", "end_time": "11:00", "pool_type": "50m"}
+]
+
 ALLOW_KEYWORDS = ["banen", "borstcrawl", "sportief", "vroege vogel", "openstelling", "zwemmen"]
 EXCLUDE_KEYWORDS = ["baby", "peuter", "aquajogging", "aquafit", "therapie", "leszwemmen", "discowemmen", "feest"]
 
@@ -40,7 +50,6 @@ def fetch_sport050_sessions():
             res = requests.get(url, headers=HEADERS, timeout=15)
             if res.status_code == 200:
                 soup = BeautifulSoup(res.text, 'html.parser')
-                # Zoek in alle tekstblokken en tabellen
                 elements = soup.find_all(['tr', 'li', 'p', 'div', 'td'])
                 for elem in elements:
                     text = elem.get_text(separator=' ').strip()
@@ -49,12 +58,12 @@ def fetch_sport050_sessions():
                         if times:
                             for start, end in times:
                                 sessions.append({
-                                    "poolId": pool_id,
+                                    "pool_id": pool_id,
                                     "date": datetime.today().strftime('%Y-%m-%d'),
                                     "day": datetime.today().weekday() + 1,
-                                    "start": start,
-                                    "end": end,
-                                    "title": "Banenzwemmen"
+                                    "start_time": start,
+                                    "end_time": end,
+                                    "activity": "Banenzwemmen"
                                 })
         except Exception as e:
             print(f"Fout bij ophalen Sport050 ({pool_id}): {e}")
@@ -69,7 +78,12 @@ def main():
     except Exception as e:
         print(f"Algemene scrape fout: {e}")
 
-    print(f"Aantal gevonden sessies: {len(sessions)}")
+    # Fallback als er live niks is opgehaald
+    if not sessions:
+        print("Geen live sessies gevonden. Fallback rooster wordt geladen...")
+        sessions = DEFAULT_SCHEDULE
+
+    print(f"Aantal sessies in uitvoer: {len(sessions)}")
 
     output_data = {
         "updated_at": datetime.now().isoformat(),

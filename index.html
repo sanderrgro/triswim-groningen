@@ -48,7 +48,6 @@
 
     <!-- TAB 2: ROOSTER -->
     <section id="tab-roster" class="hidden space-y-4">
-      <!-- Week navigatie -->
       <div class="flex items-center justify-between bg-slate-800/80 p-2.5 rounded-2xl border border-slate-700/50">
         <button onclick="changeWeek(-1)" class="p-1.5 rounded-xl bg-slate-700/50 text-slate-300 hover:bg-slate-700 hover:text-white transition">
           <i data-lucide="chevron-left" class="w-5 h-5"></i>
@@ -62,10 +61,7 @@
         </button>
       </div>
 
-      <!-- Dagen kiezer -->
       <div id="day-selector" class="flex gap-1.5 overflow-x-auto no-scrollbar py-1"></div>
-
-      <!-- Lijst met sessies -->
       <div id="roster-list" class="space-y-3"></div>
     </section>
 
@@ -100,15 +96,14 @@
     let SESSIONS = [];
     let leafletMap = null;
 
-    // Helper om weekdagnummer (1 = Maandag, 7 = Zondag) om te zetten naar Nederlandse naam
     const DAY_NAMES_MAP = {
-      1: "Maandag",
-      2: "Dinsdag",
-      3: "Woensdag",
-      4: "Donderdag",
-      5: "Vrijdag",
-      6: "Zaterdag",
-      7: "Zondag"
+      1: "maandag",
+      2: "dinsdag",
+      3: "woensdag",
+      4: "donderdag",
+      5: "vrijdag",
+      6: "zaterdag",
+      7: "zondag"
     };
 
     let currentWeekOffset = 0;
@@ -132,7 +127,7 @@
 
     async function loadData() {
       try {
-        const response = await fetch('schedule.json');
+        const response = await fetch('schedule.json?v=' + new Date().getTime());
         if (!response.ok) throw new Error(`HTTP-fout: ${response.status}`);
         const data = await response.json();
         
@@ -175,11 +170,9 @@
       const dayName = DAY_NAMES_MAP[dayNum];
 
       return SESSIONS.filter(s => {
-        // Specifieke datummatch
-        if (s.date) return s.date === dateISO;
-        // Match op dag van de week (zoals "Maandag" of nummer)
-        if (s.day_of_week) return s.day_of_week.toLowerCase() === dayName.toLowerCase();
-        if (s.day) return Number(s.day) === dayNum;
+        if (s.date && s.date === dateISO) return true;
+        if (s.day_of_week && s.day_of_week.toLowerCase() === dayName) return true;
+        if (s.day && Number(s.day) === dayNum) return true;
         return false;
       });
     }
@@ -259,9 +252,10 @@
         
         const isSelected = formatDateISO(dayDate) === formatDateISO(selectedDate);
         const dayNum = dayDate.getDate();
+        const isoStr = formatDateISO(dayDate);
 
         html += `
-          <button onclick="selectDate('${dayDate.toISOString()}')" class="flex-1 min-w-[48px] py-2 px-1 rounded-xl text-center transition flex flex-col items-center ${isSelected ? 'bg-cyan-500 text-slate-950 font-bold' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}">
+          <button onclick="selectDateByISO('${isoStr}')" class="flex-1 min-w-[48px] py-2 px-1 rounded-xl text-center transition flex flex-col items-center ${isSelected ? 'bg-cyan-500 text-slate-950 font-bold' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}">
             <span class="text-[10px] uppercase opacity-80">${dayNames[i]}</span>
             <span class="text-xs font-bold">${dayNum}</span>
           </button>
@@ -270,8 +264,9 @@
       container.innerHTML = html;
     }
 
-    function selectDate(dateString) {
-      selectedDate = new Date(dateString);
+    function selectDateByISO(isoStr) {
+      const [y, m, d] = isoStr.split('-').map(Number);
+      selectedDate = new Date(y, m - 1, d);
       const monday = getMonday(new Date(), currentWeekOffset);
       renderDaySelector(monday);
       renderRoster(selectedDate);
