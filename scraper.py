@@ -12,8 +12,9 @@ POOLS = {
     "drachten": {"name": "De Welle", "city": "Drachten", "type": "50m Wedstrijdbad", "lat": 53.1090, "lng": 6.0940}
 }
 
-ALLOW_KEYWORDS = ["banenzwemmen", "banen zwemmen", "borstcrawl", "sportief zwemmen", "vroege vogel"]
-EXCLUDE_KEYWORDS = ["baby", "peuter", "aquajogging", "aquafit", "therapie", "leszwemmen", "discowemmen"]
+# Ruimere trefwoorden om meer sessies op te vangen
+ALLOW_KEYWORDS = ["banen", "borstcrawl", "sportief", "vroege vogel", "openstelling", "zwemmen"]
+EXCLUDE_KEYWORDS = ["baby", "peuter", "aquajogging", "aquafit", "therapie", "leszwemmen", "discowemmen", "feest"]
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -39,48 +40,24 @@ def fetch_sport050_sessions():
             res = requests.get(url, headers=HEADERS, timeout=15)
             if res.status_code == 200:
                 soup = BeautifulSoup(res.text, 'html.parser')
-                rows = soup.find_all(['tr', 'div', 'p', 'li'])
-                for row in rows:
-                    text = row.get_text(separator=' ').strip()
+                # Zoek in alle tekstblokken en tabellen
+                elements = soup.find_all(['tr', 'li', 'p', 'div', 'td'])
+                for elem in elements:
+                    text = elem.get_text(separator=' ').strip()
                     if is_triathlon_suitable(text):
                         times = re.findall(r'(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})', text)
                         if times:
-                            start, end = times[0]
-                            sessions.append({
-                                "poolId": pool_id,
-                                "date": datetime.today().strftime('%Y-%m-%d'),
-                                "day": datetime.today().weekday() + 1,
-                                "start": start,
-                                "end": end,
-                                "title": "Banenzwemmen"
-                            })
+                            for start, end in times:
+                                sessions.append({
+                                    "poolId": pool_id,
+                                    "date": datetime.today().strftime('%Y-%m-%d'),
+                                    "day": datetime.today().weekday() + 1,
+                                    "start": start,
+                                    "end": end,
+                                    "title": "Banenzwemmen"
+                                })
         except Exception as e:
-            print(f"Fout bij ophalen {pool_id}: {e}")
-    return sessions
-
-def fetch_haren_sessions():
-    sessions = []
-    url = "https://www.scharlakenhof.nl/openingstijden/"
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=15)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.text, 'html.parser')
-            for item in soup.find_all(['li', 'p', 'tr', 'div']):
-                text = item.get_text()
-                if is_triathlon_suitable(text):
-                    times = re.findall(r'(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})', text)
-                    if times:
-                        start, end = times[0]
-                        sessions.append({
-                            "poolId": "haren",
-                            "date": datetime.today().strftime('%Y-%m-%d'),
-                            "day": datetime.today().weekday() + 1,
-                            "start": start,
-                            "end": end,
-                            "title": "Banenzwemmen"
-                        })
-    except Exception as e:
-        print(f"Fout bij ophalen Haren: {e}")
+            print(f"Fout bij ophalen Sport050 ({pool_id}): {e}")
     return sessions
 
 def main():
@@ -90,12 +67,9 @@ def main():
     try:
         sessions.extend(fetch_sport050_sessions())
     except Exception as e:
-        print(f"Sport050 fout: {e}")
-        
-    try:
-        sessions.extend(fetch_haren_sessions())
-    except Exception as e:
-        print(f"Haren fout: {e}")
+        print(f"Algemene scrape fout: {e}")
+
+    print(f"Aantal gevonden sessies: {len(sessions)}")
 
     output_data = {
         "updated_at": datetime.now().isoformat(),
@@ -106,7 +80,7 @@ def main():
     with open('schedule.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    print(f"Klaar! {len(sessions)} sessies opgeslagen in schedule.json.")
+    print("schedule.json succesvol bijgewerkt.")
 
 if __name__ == "__main__":
     main()
