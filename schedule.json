@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-10-01T06:57:52.790507",
+  "pools": {
+    "kardinge": {
+      "name": "Sportcentrum Kardinge",
+      "city": "Groningen",
+      "type": "25m / 50m",
+      "lat": 53.2381,
+      "lng": 6.6025
+    },
+    "parrel": {
+      "name": "Zwembad De Parrel",
+      "city": "Groningen",
+      "type": "25m",
+      "lat": 53.2345,
+      "lng": 6.5512
+    },
+    "helperbad": {
+      "name": "Helperbad",
+      "city": "Groningen",
+      "type": "25m",
+      "lat": 53.1978,
+      "lng": 6.5791
+    },
+    "haren": {
+      "name": "Scharlakenhof",
+      "city": "Haren",
+      "type": "25m",
+      "lat": 53.1712,
+      "lng": 6.612
+    },
+    "drachten": {
+      "name": "De Welle",
+      "city": "Drachten",
+      "type": "50m Wedstrijdbad",
+      "lat": 53.109,
+      "lng": 6.094
+    }
+  },
+  "sessions": []
+}
