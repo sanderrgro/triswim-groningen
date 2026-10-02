@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T13:46:00",
+  "updated_at": "2026-10-02T04:16:46.316385",
   "pools": {
     "kardinge": {
       "name": "Sportcentrum Kardinge",
@@ -16,7 +16,7 @@
       "lng": 6.5512
     },
     "helperbad": {
-      "name": "Helperzwembad",
+      "name": "Helperbad",
       "city": "Groningen",
       "type": "25m",
       "lat": 53.1978,
@@ -27,105 +27,72 @@
       "city": "Haren",
       "type": "25m",
       "lat": 53.1712,
-      "lng": 6.6120
+      "lng": 6.612
     },
     "drachten": {
       "name": "De Welle",
       "city": "Drachten",
       "type": "50m Wedstrijdbad",
-      "lat": 53.1090,
-      "lng": 6.0940
+      "lat": 53.109,
+      "lng": 6.094
     }
   },
   "sessions": [
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "10:00", "end_time": "12:00", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "17:15", "end_time": "18:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "20:15", "end_time": "21:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "10:00", "end_time": "12:00", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "17:15", "end_time": "18:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "20:15", "end_time": "21:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "10:00", "end_time": "12:00", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "14:00", "end_time": "15:30", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "20:15", "end_time": "21:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen warm water", "day_of_week": "donderdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "10:00", "end_time": "12:00", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "17:15", "end_time": "18:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "20:15", "end_time": "21:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "10:00", "end_time": "12:00", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "17:15", "end_time": "18:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "20:15", "end_time": "21:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "zaterdag", "start_time": "10:15", "end_time": "11:15", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen (deel van het bad)", "day_of_week": "zaterdag", "start_time": "13:15", "end_time": "17:00", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "zondag", "start_time": "10:00", "end_time": "11:00", "pool_type": "25 meter bad"},
-    {"pool_id": "kardinge", "activity": "Banen zwemmen", "day_of_week": "zondag", "start_time": "16:00", "end_time": "17:00", "pool_type": "25 meter bad"},
-
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "07:00", "end_time": "12:30", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "17:15", "end_time": "18:15", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "20:00", "end_time": "21:00", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "07:00", "end_time": "09:45", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "11:15", "end_time": "15:00", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "17:15", "end_time": "18:15", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "20:00", "end_time": "21:00", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "07:00", "end_time": "09:30", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "10:00", "end_time": "13:30", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "20:00", "end_time": "21:00", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "07:00", "end_time": "13:15", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "17:30", "end_time": "18:30", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "20:00", "end_time": "21:00", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "07:00", "end_time": "09:00", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "11:00", "end_time": "14:45", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "zaterdag", "start_time": "07:00", "end_time": "08:00", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "zaterdag", "start_time": "10:45", "end_time": "12:15", "pool_type": "25 meter bad"},
-    {"pool_id": "parrel", "activity": "Banen zwemmen", "day_of_week": "zondag", "start_time": "08:00", "end_time": "10:00", "pool_type": "25 meter bad"},
-
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "07:00", "end_time": "12:15", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "12:15", "end_time": "13:30", "pool_type": "Ranomi bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "17:15", "end_time": "18:15", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "20:15", "end_time": "21:15", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "07:00", "end_time": "12:00", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "12:00", "end_time": "13:30", "pool_type": "Ranomi bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "17:15", "end_time": "18:15", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "20:00", "end_time": "22:00", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "07:00", "end_time": "13:30", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "17:15", "end_time": "18:15", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "20:00", "end_time": "22:00", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen warm water", "day_of_week": "donderdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "08:30", "end_time": "10:00", "pool_type": "Ranomi bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen warm water", "day_of_week": "donderdag", "start_time": "10:00", "end_time": "11:00", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "12:00", "end_time": "14:30", "pool_type": "Ranomi bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen warm water", "day_of_week": "donderdag", "start_time": "17:15", "end_time": "18:15", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen warm water", "day_of_week": "donderdag", "start_time": "20:30", "end_time": "22:00", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen warm water", "day_of_week": "vrijdag", "start_time": "07:00", "end_time": "08:30", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "08:30", "end_time": "10:00", "pool_type": "Ranomi bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen warm water", "day_of_week": "vrijdag", "start_time": "10:00", "end_time": "11:00", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "11:00", "end_time": "13:30", "pool_type": "Ranomi bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen warm water", "day_of_week": "vrijdag", "start_time": "20:00", "end_time": "21:00", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "zaterdag", "start_time": "09:00", "end_time": "11:00", "pool_type": "Eelkema bad"},
-    {"pool_id": "helperbad", "activity": "Banen zwemmen", "day_of_week": "zondag", "start_time": "08:00", "end_time": "10:00", "pool_type": "Ranomi bad"},
-
-    {"pool_id": "haren", "activity": "Banenzwemmen", "day_of_week": "maandag", "start_time": "07:30", "end_time": "13:00", "pool_type": "25 m bassin"},
-    {"pool_id": "haren", "activity": "Banenzwemmen", "day_of_week": "maandag", "start_time": "18:30", "end_time": "21:00", "pool_type": "25 m bassin"},
-    {"pool_id": "haren", "activity": "Banenzwemmen", "day_of_week": "dinsdag", "start_time": "07:30", "end_time": "13:00", "pool_type": "25 m bassin"},
-    {"pool_id": "haren", "activity": "Banenzwemmen", "day_of_week": "woensdag", "start_time": "07:30", "end_time": "13:00", "pool_type": "25 m bassin"},
-    {"pool_id": "haren", "activity": "Banenzwemmen", "day_of_week": "woensdag", "start_time": "18:30", "end_time": "21:00", "pool_type": "25 m bassin"},
-    {"pool_id": "haren", "activity": "Banenzwemmen", "day_of_week": "donderdag", "start_time": "07:30", "end_time": "13:00", "pool_type": "25 m bassin"},
-    {"pool_id": "haren", "activity": "Banenzwemmen", "day_of_week": "vrijdag", "start_time": "07:30", "end_time": "13:00", "pool_type": "25 m bassin"},
-    {"pool_id": "haren", "activity": "Banenzwemmen", "day_of_week": "zondag", "start_time": "10:00", "end_time": "13:00", "pool_type": "25 m bassin"},
-
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "07:00", "end_time": "14:00", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "maandag", "start_time": "19:00", "end_time": "21:15", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "07:00", "end_time": "14:00", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "dinsdag", "start_time": "19:00", "end_time": "20:30", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "07:00", "end_time": "14:00", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "woensdag", "start_time": "19:00", "end_time": "20:30", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "07:00", "end_time": "14:00", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "donderdag", "start_time": "19:00", "end_time": "20:30", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "07:00", "end_time": "14:00", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "vrijdag", "start_time": "18:00", "end_time": "18:45", "pool_type": "50m Wedstrijdbad"},
-    {"pool_id": "drachten", "activity": "Banen zwemmen", "day_of_week": "zondag", "start_time": "08:30", "end_time": "15:30", "pool_type": "50m Wedstrijdbad"}
+    {
+      "pool_id": "kardinge",
+      "activity": "Banenzwemmen 50m",
+      "day_of_week": "Maandag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "50m"
+    },
+    {
+      "pool_id": "kardinge",
+      "activity": "Banenzwemmen",
+      "day_of_week": "Dinsdag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "25m"
+    },
+    {
+      "pool_id": "helperbad",
+      "activity": "Ochtendzwemmen",
+      "day_of_week": "Woensdag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "25m"
+    },
+    {
+      "pool_id": "parrel",
+      "activity": "Banenzwemmen",
+      "day_of_week": "Donderdag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "25m"
+    },
+    {
+      "pool_id": "kardinge",
+      "activity": "Banenzwemmen 50m",
+      "day_of_week": "Vrijdag",
+      "start_time": "07:00",
+      "end_time": "08:30",
+      "pool_type": "50m"
+    },
+    {
+      "pool_id": "haren",
+      "activity": "Banenzwemmen",
+      "day_of_week": "Zaterdag",
+      "start_time": "08:00",
+      "end_time": "10:00",
+      "pool_type": "25m"
+    },
+    {
+      "pool_id": "drachten",
+      "activity": "50m Borstcrawl Training",
+      "day_of_week": "Zondag",
+      "start_time": "09:00",
+      "end_time": "11:00",
+      "pool_type": "50m"
+    }
   ]
 }
